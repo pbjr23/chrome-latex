@@ -6,5 +6,16 @@
   },
   "description": "View LaTeX files (.tex) directly in Chrome!",
   "manifest_version": 2,
-  "permissions": ["webRequest", "webRequestBlocking", "http://*/*", "https://*/*"]
+  "permissions": ["webRequest", "webRequestBlocking", "http://*/*", "https://*/*"],
+  "content_scripts": [
+    {
+        "matches": [
+            "*://*/*.tex"
+        ],
+        "js": [
+            "jquery-2.1.1.min.js", "content.js"
+        ],
+        "run_at": "document_end"
+    }
+    ]
 }
