@@ -4,7 +4,7 @@ chrome.webRequest.onBeforeRequest.addListener(
   },
   {
     urls: [
-      "http://en.wikipedia.org/*"
+      "http://*/*.tex"
     ]
   },
   ["blocking"]);
