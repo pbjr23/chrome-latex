@@ -1,16 +1,10 @@
 {
-  "name": "URL Redirect",
+  "name": "Chrome LaTeX Viewer",
   "version": "0.2",
-  "description": "Checks URL and redirects as required.",
-  "background": { 
-     "page":"bg.html"
-     },
-   "manifest_version": 2,
-   "content_scripts": [
-   {
-     "matches": ["http://*/*", "https://*/*"],
-     "js": ["content.js"]
-   }
-   ],
-  "permissions": ["tabs"]
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "description": "View LaTeX files (.tex) directly in Chrome!",
+  "manifest_version": 2,
+  "permissions": ["webRequest", "webRequestBlocking", "http://*/*", "https://*/*"]
 }
