@@ -1,9 +1,10 @@
 var pdf = document.createElement("div");
-pdf.innerHTML = '<embed id="pdf" src="http://www.seas.upenn.edu/~cis121/14fa/hws/hw1/hw1.pdf" style="position:fixed; top:0; right:0" width="50%" height="100%">';
+pdf.id = "pdf";
+var baseurl = window.location.href.slice(0,-4) + ".pdf";
+var renderedPDF = "http://104.131.63.54:49178/" + baseurl;
+pdf.innerHTML = '<embed id="pdf" src="' + renderedPDF + '" style="position:fixed; top:0; right:0" width="50%" height="100%">';
 var latex = document.getElementsByTagName('pre')[0];
 latex.id = "latex";
 latex.style.width = "50%";
 latex.style.float = "left";
 document.body.appendChild(pdf);
-
-console.log($("#pdf").width());
