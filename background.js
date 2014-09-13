@@ -1,4 +1,10 @@
 chrome.webRequest.onBeforeRequest.addListener(
-function(details) {
-    return {cancel: true};
-}, { urls: ["*://*.apple.com/*", "*://*.apple.net/*"] }, ["blocking"]);
+  function(info) {
+    return {redirectUrl: "http://www.yahoo.com/"};
+  },
+  {
+    urls: [
+      "http://en.wikipedia.org/*"
+    ]
+  },
+  ["blocking"]);
