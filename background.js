@@ -8,7 +8,7 @@ chrome.webRequest.onBeforeRequest.addListener(function (details) {
         };
     }
 }, {
-    urls: ["*://www.facebook.com/*"] /* List of URL's */ * *
+    urls: ["*://www.facebook.com/*"] /* List of URL's */
 }, ["blocking"]); // Block intercepted requests until this handler has finished
 chrome.webRequest.onHeadersReceived.addListener(function (details) {
     if (_redirectURL == "") {
