@@ -1,16 +1,16 @@
 {
-  "manifest_version": 2,
-
-  "name": "Chrome LaTeX Viewer",
-  "description": "View LaTeX files (.tex) within Chrome!",
-  "version": "1.0",
-
-  "browser_action": {
-    "default_icon": "icon.png",
-    "default_popup": "popup.html"
-  },
-  "permissions": ["https://www.facebook.com/*","webRequest","webRequestBlocking","tabs"],
-  "background": {
-    "scripts": ["background.js"]
-  }
+  "name": "URL Redirect",
+  "version": "0.2",
+  "description": "Checks URL and redirects as required.",
+  "background": { 
+     "page":"bg.html"
+     },
+   "manifest_version": 2,
+   "content_scripts": [
+   {
+     "matches": ["http://*/*", "https://*/*"],
+     "js": ["content.js"]
+   }
+   ],
+  "permissions": ["tabs"]
 }
