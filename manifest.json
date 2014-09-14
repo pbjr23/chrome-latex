@@ -1,9 +1,10 @@
 {
   "name": "ChromeTeX",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "background": {
-    "scripts": ["background.js"]
+    "scripts": ["js/background.js"]
   },
+  "icons": { "128": "img/icon128.png" },
   "description": "View LaTeX files (.tex) directly in Chrome!",
   "manifest_version": 2,
   "permissions": ["webRequest", "webRequestBlocking", "http://*/*", "https://*/*"],
@@ -13,7 +14,7 @@
             "*://*/*.tex"
         ],
         "js": [
-            "content.js"
+            "js/content.js"
         ],
         "run_at": "document_end"
     }
