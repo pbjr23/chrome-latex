@@ -1,6 +1,6 @@
 {
-  "name": "Chrome LaTeX Viewer",
-  "version": "0.2",
+  "name": "ChromeTeX",
+  "version": "0.0.2",
   "background": {
     "scripts": ["background.js"]
   },
